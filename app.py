@@ -1,6 +1,6 @@
 import streamlit as st
 
-from pawpal import Owner, Pet, Task, build_daily_plan
+from pawpal_system import Owner, Pet, Task, build_daily_plan
 
 st.set_page_config(page_title="PawPal+", page_icon="🐾", layout="centered")
 

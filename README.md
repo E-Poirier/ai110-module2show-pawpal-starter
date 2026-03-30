@@ -22,6 +22,17 @@ Your final app should:
 - Display the plan clearly (and ideally explain the reasoning)
 - Include tests for the most important scheduling behaviors
 
+## Project layout (CodePath Unit 5)
+
+| Piece | Role |
+|-------|------|
+| [`pawpal_system.py`](pawpal_system.py) | Logic-layer entry point: re-exports models + `build_daily_plan`, and a `Scheduler` class |
+| [`pawpal/`](pawpal/) | Implementation (`models`, `scheduler`) |
+| [`app.py`](app.py) | Streamlit UI (imports from `pawpal_system`) |
+| [`main.py`](main.py) | CLI demo: `python main.py` |
+| [`tests/test_pawpal.py`](tests/test_pawpal.py) | Tests via `pawpal_system` |
+| [`tests/test_scheduler.py`](tests/test_scheduler.py) | Same behaviors, direct `pawpal` imports |
+
 ## Getting started
 
 ### Setup
@@ -30,6 +41,18 @@ Your final app should:
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
+
+### Run CLI demo
+
+```bash
+python main.py
+```
+
+### Run tests
+
+```bash
+python -m pytest
 ```
 
 ### Suggested workflow
